@@ -125,7 +125,6 @@ public class Parser {
 
 			while (reader.hasNext()) {
 				int event = reader.next();
-
 				switch (event) {
 				case XMLStreamConstants.START_ELEMENT:
 					if ((reader.getLocalName()).equals("item")) {
