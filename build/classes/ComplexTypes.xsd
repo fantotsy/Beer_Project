@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ComplexTypes"
+	xmlns:tns="http://www.example.org/ComplexTypes" elementFormDefault="qualified"
+	xmlns:pref="http://www.example.org/SimpleTypes">
+
+	<import schemaLocation="SimpleTypes.xsd" namespace="http://www.example.org/SimpleTypes"></import>
+	<complexType name="alType">
+		<attribute name="alcoholContent" type="pref:doublePercentageType" />
+	</complexType>
+
+</schema>

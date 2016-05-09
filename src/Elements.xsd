@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Elements"
+	xmlns:tns="http://www.example.org/Elements" elementFormDefault="qualified"
+	xmlns:pref="http://www.example.org/ComplexTypes" xmlns:pref1="http://www.example.org/SimpleTypes">
+	<import schemaLocation="ComplexTypes.xsd" namespace="http://www.example.org/ComplexTypes">
+	</import>
+	<import schemaLocation="SimpleTypes.xsd" namespace="http://www.example.org/SimpleTypes"></import>
+
+	<element name="name" type="string"></element>
+
+	<element name="type" type="pref1:beerType"></element>
+
+	<element name="manufacturer" type="string"></element>
+
+	<element name="al" type="pref:alType"></element>
+
+	<element name="ingredients">
+		<complexType>
+			<sequence>
+				<element name="ingredient" type="string" maxOccurs="unbounded" />
+			</sequence>
+		</complexType>
+	</element>
+
+	<element name="castingMethod">
+		<complexType>
+			<sequence>
+				<element name="volume" type="pref1:volumeType" />
+				<element name="material" type="pref1:materialType" />
+			</sequence>
+		</complexType>
+	</element>
+
+	<element name="chars">
+		<complexType>
+			<sequence>
+				<element name="transparency" type="pref1:integerPercentageType" />
+				<element name="filtered" type="boolean" />
+				<element name="kcal" type="positiveInteger" />
+				<element ref="tns:castingMethod" />
+			</sequence>
+		</complexType>
+	</element>
+
+	<element name="item">
+		<complexType>
+			<sequence>
+				<element ref="tns:name" />
+				<element ref="tns:type" />
+				<element ref="tns:manufacturer" />
+				<element ref="tns:al" minOccurs="0" />
+				<element ref="tns:ingredients" />
+				<element ref="tns:chars" />
+			</sequence>
+			<attribute name="id" type="ID" />
+		</complexType>
+	</element>
+
+	<element name="beer">
+		<complexType>
+			<sequence>
+				<element ref="tns:item" maxOccurs="unbounded" />
+			</sequence>
+		</complexType>
+	</element>
+
+</schema>

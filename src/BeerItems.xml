@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<el:beer xmlns:xsi="http://www.w3.org/2001/XMLSchema" xmlns:el="http://www.example.org/Elements">
+	<el:item id="beer_1">
+		<el:name>Beck's</el:name>
+		<el:type>светлое</el:type>
+		<el:manufacturer>САН ИнБев Украина</el:manufacturer>
+		<el:al alcoholContent="4.8%" />
+		<el:ingredients>
+			<el:ingredient>Вода</el:ingredient>
+			<el:ingredient>Солод</el:ingredient>
+			<el:ingredient>Дрожжи</el:ingredient>
+			<el:ingredient>Хмель</el:ingredient>
+		</el:ingredients>
+		<el:chars>
+			<el:transparency>20%</el:transparency>
+			<el:filtered>true</el:filtered>
+			<el:kcal>42</el:kcal>
+			<el:castingMethod>
+				<el:volume>0.5l</el:volume>
+				<el:material>стекло</el:material>
+			</el:castingMethod>
+		</el:chars>
+	</el:item>
+	<el:item id="beer_2">
+		<el:name>Obolon</el:name>
+		<el:type>лагерное</el:type>
+		<el:manufacturer>ЗАО "Оболонь"</el:manufacturer>
+		<el:al alcoholContent="5.0%" />
+		<el:ingredients>
+			<el:ingredient>Вода</el:ingredient>
+			<el:ingredient>Солод</el:ingredient>
+			<el:ingredient>Рис</el:ingredient>
+			<el:ingredient>Мальтозная патока</el:ingredient>
+			<el:ingredient>Хмель</el:ingredient>
+		</el:ingredients>
+		<el:chars>
+			<el:transparency>16%</el:transparency>
+			<el:filtered>false</el:filtered>
+			<el:kcal>45</el:kcal>
+			<el:castingMethod>
+				<el:volume>0.5l</el:volume>
+				<el:material>банка</el:material>
+			</el:castingMethod>
+		</el:chars>
+	</el:item>
+	<el:item id="beer_3">
+		<el:name>Kozel</el:name>
+		<el:type>темное</el:type>
+		<el:manufacturer>"Балтика"</el:manufacturer>
+		<el:al alcoholContent="4.6%" />
+		<el:ingredients>
+			<el:ingredient>Вода</el:ingredient>
+			<el:ingredient>Солод</el:ingredient>
+			<el:ingredient>Сахар</el:ingredient>
+			<el:ingredient>Хмелепродукты</el:ingredient>
+		</el:ingredients>
+		<el:chars>
+			<el:transparency>17%</el:transparency>
+			<el:filtered>false</el:filtered>
+			<el:kcal>44</el:kcal>
+			<el:castingMethod>
+				<el:volume>0.5l</el:volume>
+				<el:material>стекло</el:material>
+			</el:castingMethod>
+		</el:chars>
+	</el:item>
+	<el:item id="beer_4">
+		<el:name>Stella Artois</el:name>
+		<el:type>светлое</el:type>
+		<el:manufacturer>САН ИнБев Украина</el:manufacturer>
+		<el:ingredients>
+			<el:ingredient>Вода</el:ingredient>
+			<el:ingredient>Солод</el:ingredient>
+			<el:ingredient>Мальтозная патока</el:ingredient>
+			<el:ingredient>Хмелепродукты</el:ingredient>
+		</el:ingredients>
+		<el:chars>
+			<el:transparency>13%</el:transparency>
+			<el:filtered>false</el:filtered>
+			<el:kcal>43</el:kcal>
+			<el:castingMethod>
+				<el:volume>1.0l</el:volume>
+				<el:material>стекло</el:material>
+			</el:castingMethod>
+		</el:chars>
+	</el:item>
+</el:beer>
