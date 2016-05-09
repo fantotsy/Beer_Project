@@ -40,7 +40,6 @@ public class Parser {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
 		return handler.getResult();
 	}
 
