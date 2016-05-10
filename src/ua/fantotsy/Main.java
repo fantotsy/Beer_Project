@@ -21,6 +21,11 @@ public class Main {
 
 		beerItems = Parser.StAXParsing("src/BeerItems.xml");
 		Parser.printData(beerItems, "StAX Parser");
+		
+		System.out.println("\n\n");
+		
+		HTMLBuilder builder = new HTMLBuilder();
+		builder.buildHTML("src/BeerItems.xsl", "src/BeerItems.xml", "src/BeerItems.html");
 	}
 
 	public static Beer sortByParameter(Beer beerItems, String parameter) {
