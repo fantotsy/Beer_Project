@@ -1,3 +1,10 @@
+/* Project 3. Beer
+ *
+ * class SortedByKcal implements Comparator<Item>
+ *
+ * fantotsy ©
+ */
+
 package ua.fantotsy.comparator;
 
 import java.util.Comparator;
@@ -5,6 +12,7 @@ import java.util.Comparator;
 import ua.fantotsy.jaxb.Item;
 
 public class SortedByKcal implements Comparator<Item> {
+
 	@Override
 	public int compare(Item item1, Item item2) {
 		int kcal1 = item1.getChars().getKcal().intValue();

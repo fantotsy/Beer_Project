@@ -4,8 +4,8 @@
 	xmlns:pref="http://www.example.org/SimpleTypes">
 
 	<import schemaLocation="SimpleTypes.xsd" namespace="http://www.example.org/SimpleTypes"></import>
+
 	<complexType name="alType">
 		<attribute name="alcoholContent" type="pref:doublePercentageType" />
 	</complexType>
-
 </schema>

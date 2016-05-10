@@ -1,3 +1,10 @@
+/* Project 3. Beer
+ *
+ * class XMLValidator
+ *
+ * fantotsy ©
+ */
+
 package ua.fantotsy;
 
 import java.io.File;

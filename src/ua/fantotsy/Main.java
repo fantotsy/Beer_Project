@@ -1,3 +1,10 @@
+/* Project 3. Beer
+ *
+ * class Main
+ *
+ * fantotsy ©
+ */
+
 package ua.fantotsy;
 
 import ua.fantotsy.comparator.*;
@@ -21,9 +28,9 @@ public class Main {
 
 		beerItems = Parser.StAXParsing("src/BeerItems.xml");
 		Parser.printData(beerItems, "StAX Parser");
-		
+
 		System.out.println("\n\n");
-		
+
 		HTMLBuilder builder = new HTMLBuilder();
 		builder.buildHTML("src/BeerItems.xsl", "src/BeerItems.xml", "src/BeerItems.html");
 	}

@@ -25,9 +25,7 @@
 						<th>Volume</th>
 						<th>Material</th>
 					</tr>
-
 					<xsl:for-each select="el:beer/el:item">
-
 						<tr>
 							<td>
 								<xsl:value-of select="el:name" />
@@ -77,7 +75,6 @@
 								<xsl:value-of select="el:chars/el:castingMethod/el:material" />
 							</td>
 						</tr>
-
 					</xsl:for-each>
 				</table>
 			</body>

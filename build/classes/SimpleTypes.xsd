@@ -2,7 +2,6 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/SimpleTypes"
 	xmlns:tns="http://www.example.org/SimpleTypes" elementFormDefault="qualified">
 
-
 	<simpleType name="beerType">
 		<restriction base="string">
 			<enumeration value="светлое"></enumeration>
@@ -11,7 +10,6 @@
 			<enumeration value="живое"></enumeration>
 		</restriction>
 	</simpleType>
-
 	<simpleType name="materialType">
 		<restriction base="string">
 			<enumeration value="стекло"></enumeration>
@@ -19,25 +17,21 @@
 			<enumeration value="банка"></enumeration>
 		</restriction>
 	</simpleType>
-
 	<simpleType name="doublePercentageType">
 		<restriction base="string">
 			<pattern value="[1-9][0-9]?\.[0-9][0-9]?%"></pattern>
 		</restriction>
 	</simpleType>
-
 	<simpleType name="integerPercentageType">
 		<restriction base="string">
 			<pattern value="[1-9][0-9]?%"></pattern>
 		</restriction>
 	</simpleType>
-
 	<simpleType name="volumeType">
 		<restriction base="string">
 			<pattern value="[0-2]\.[0-9][0-9]?l?"></pattern>
 		</restriction>
 	</simpleType>
-
 	<simpleType name="kcalType">
 		<restriction base="int">
 			<minInclusive value="20"></minInclusive>

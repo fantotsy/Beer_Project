@@ -1,3 +1,10 @@
+/* Project 3. Beer
+ *
+ * class HTMLBuilder
+ *
+ * fantotsy ©
+ */
+
 package ua.fantotsy;
 
 import javax.xml.transform.Transformer;
@@ -14,8 +21,8 @@ public class HTMLBuilder {
 			Transformer transformer = factory.newTransformer(new StreamSource(xslFile));
 			transformer.transform(new StreamSource(xmlFile), new StreamResult(outputFile));
 		} catch (TransformerException e) {
-			System.out.println("Error!" + e.getMessage());
+			System.out.println("File " + outputFile + " cannot be built: " + e.getMessage());
 		}
-		System.out.println("Ok!");
+		System.out.println("File " + outputFile + " is successfully built.");
 	}
 }

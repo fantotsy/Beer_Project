@@ -1,3 +1,10 @@
+/* Project 3. Beer
+ *
+ * class Parser
+ *
+ * fantotsy ©
+ */
+
 package ua.fantotsy;
 
 import java.io.File;
@@ -29,6 +36,7 @@ import ua.fantotsy.jaxb.Item;
 import ua.fantotsy.jaxb.MaterialType;
 
 public class Parser {
+
 	public static Beer SAXParsing(String filePath) {
 		SAXParserFactory parserF = SAXParserFactory.newInstance();
 		SAXHandler handler = new SAXHandler();
@@ -49,25 +57,25 @@ public class Parser {
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder documentBuilder = factory.newDocumentBuilder();
 			Document doc = documentBuilder.parse(new File(filePath));
-
 			NodeList items = doc.getElementsByTagName("el:item");
-
 			for (int i = 0; i < items.getLength(); i++) {
 				Item beerItem = new Item();
 				Element item = (Element) items.item(i);
 
 				beerItem.setId(item.getAttribute("id"));
+
 				beerItem.setName(item.getElementsByTagName("el:name").item(0).getFirstChild().getNodeValue());
+
 				beerItem.setType(BeerType
 						.fromValue(item.getElementsByTagName("el:type").item(0).getFirstChild().getNodeValue()));
 
 				Element beerAl = (Element) item.getElementsByTagName("el:al").item(0);
 				if (beerAl != null) {
 					AlType al = new AlType();
-
 					al.setAlcoholContent(beerAl.getAttribute("alcoholContent"));
 					beerItem.setAl(al);
 				}
+
 				beerItem.setManufacturer(
 						item.getElementsByTagName("el:manufacturer").item(0).getFirstChild().getNodeValue());
 
@@ -95,14 +103,12 @@ public class Parser {
 						.setVolume(cMethod.getElementsByTagName("el:volume").item(0).getFirstChild().getNodeValue());
 				beerCastingMethod.setMaterial(MaterialType
 						.fromValue(cMethod.getElementsByTagName("el:material").item(0).getFirstChild().getNodeValue()));
-
 				beerChars.setCastingMethod(beerCastingMethod);
+
 				beerItem.setChars(beerChars);
 
 				beerItems.getItem().add(beerItem);
-
 			}
-
 		} catch (ParserConfigurationException | SAXException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -122,7 +128,6 @@ public class Parser {
 			FileInputStream input = new FileInputStream(filePath);
 			XMLInputFactory factory = XMLInputFactory.newInstance();
 			XMLStreamReader reader = factory.createXMLStreamReader(input);
-
 			while (reader.hasNext()) {
 				int event = reader.next();
 				switch (event) {
@@ -146,61 +151,47 @@ public class Parser {
 						beerCastingMethod = new CastingMethod();
 					}
 					break;
-
 				case XMLStreamConstants.CHARACTERS:
 					tagContent = reader.getText().trim();
 					break;
-
 				case XMLStreamConstants.END_ELEMENT:
 					switch (reader.getLocalName()) {
 					case "item":
 						beerItems.getItem().add(beerItem);
 						break;
-
 					case "name":
 						beerItem.setName(tagContent);
 						break;
-
 					case "type":
 						beerItem.setType(BeerType.fromValue(tagContent));
 						break;
-
 					case "manufacturer":
 						beerItem.setManufacturer(tagContent);
 						break;
-
 					case "ingredient":
 						beerIngredients.getIngredient().add(tagContent);
 						break;
-
 					case "ingredients":
 						beerItem.setIngredients(beerIngredients);
 						break;
-
 					case "transparency":
 						beerChars.setTransparency(tagContent);
 						break;
-
 					case "filtered":
 						beerChars.setFiltered(Boolean.parseBoolean(tagContent));
 						break;
-
 					case "kcal":
 						beerChars.setKcal(new BigInteger(tagContent));
 						break;
-
 					case "volume":
 						beerCastingMethod.setVolume(tagContent);
 						break;
-
 					case "material":
 						beerCastingMethod.setMaterial(MaterialType.fromValue(tagContent));
 						break;
-
 					case "castingMethod":
 						beerChars.setCastingMethod(beerCastingMethod);
 						break;
-
 					case "chars":
 						beerItem.setChars(beerChars);
 						break;

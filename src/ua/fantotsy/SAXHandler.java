@@ -1,3 +1,10 @@
+/* Project 3. Beer
+ *
+ * class SAXHandler extends DefaultHandler
+ *
+ * fantotsy ©
+ */
+
 package ua.fantotsy;
 
 import java.math.BigInteger;
@@ -107,5 +114,4 @@ public class SAXHandler extends DefaultHandler {
 			beerCastingMethod.setMaterial(MaterialType.fromValue(new String(ch, start, end)));
 		}
 	}
-
 }
