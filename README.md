@@ -1,16 +1,16 @@
-Task 3:
-1.	Создать файл XML и соответствующую ему схему XSD. 
-2.	При разработке XSD использовать простые и комплексные типы, перечисления, шаблоны и предельные значения, обязательно использование атрибутов и типа ID.
-3.	Сгенерировать (создать) Java-класс, соответствующий данному описанию. 
-4.	Создать Java-приложение для разбора XML-документа и инициализации коллекции объектов информацией из XML-файла. Для разбора использовать SAX, DOM и StAX парсеры. Для сортировки объектов использовать интерфейс Comparator.
-5.	Произвести проверку XML-документа с привлечением XSD. 
-6.	Определить метод, производящий преобразование разработанного XML-документа в документ, указанный в каждом задании.
+Project 3:
+1.	Create XML-file and the corresponding schema XSD. 
+2.	In developing of XSD use simple and complex types, enumerations, templates and limit values, be sure to use attributes, and type ID.
+3.	Generate (create) Java-class that matches this description. 
+4.	Create a Java-application to parse the XML-document and a collection of objects, initialized with information from the XML-file. To parse use SAX, DOM and StAX parsers. Use Comparator interface to sort the objects use.
+5.	Make checks of XML-document with the assistance of the XSD.
+6.	Determine the method of producing the transformation of developed XML-document in the document, described below.
 
-Вариант 10.	Пиво.
-•	Name – название пива.
-•	Type – тип пива (темное, светлое, лагерное, живое).
-•	Al – алкогольное либо нет.
-•	Manufacturer – фирма-производитель.
-•	Ingredients (должно быть несколько) – ингредиенты: вода, солод, хмель, сахар и т.д.
-•	Chars (должно быть несколько) – характеристики: кол-во оборотов (если алкогольное), прозрачность (в процентах), фильтрованное либо нет, пищевая ценность (ккал), способ разлива (объем и материал емкостей)
-•	Корневой элемент назвать Beer.
+Tsk 13: Beer.
+•	Name – name of beer.
+•	Type – type of beer.
+•	Al – alcoholic or not.
+•	Manufacturer.
+•	Ingredients.
+•	Chars: beer characteristics.
+•	The root element called Beer.
